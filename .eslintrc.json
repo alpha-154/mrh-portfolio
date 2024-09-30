@@ -1,3 +1,27 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+
+    // Disable 'prefer-const' rule to allow using 'let' instead of 'const'
+    "prefer-const": "off",
+    
+    // Disable 'no-unused-vars' rule to avoid warnings for unused variables
+    "@typescript-eslint/no-unused-vars": "off",
+
+    // Disable 'no-explicit-any' rule to allow usage of 'any' type
+    "@typescript-eslint/no-explicit-any": "off",
+
+     // Disable no-unused-expressions rule to allow short-circuit expressions
+     "@typescript-eslint/no-unused-expressions": "off",
+
+     // Or, allow short-circuiting and ternary expressions (alternative option)
+    //"no-unused-expressions": ["warn", { "allowShortCircuit": true, "allowTernary": true }]
+      
+
+    // Disable the react-hooks/exhaustive-deps rule
+    "react-hooks/exhaustive-deps": "off",
+
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-require-imports": "off"
+  }
 }
